@@ -209,9 +209,21 @@ FROM hire_data
 ORDER BY percent_hire_change ASC;
 ```
 
-  
+
 ## Data Visualization(PowerBI): 
 - Import the data to PowerBI
 - Import the EDA results that were done in MySQL earlier
 - Create an age column by calculating with the birthdate column
 - Create a measure to calculate total employees, working employees, and retired employees
+```dax
+RetiredEmp = 
+CALCULATE(
+    COUNTROWS(hrdata),
+    FILTER(
+        hrdata,
+        YEAR(hrdata[termdate]) <= YEAR(TODAY()) && NOT(ISBLANK(hrdata[termdate]))
+    )
+)
+```
+- Create graphs for visualization to make it easier to understand and draw conclusions from existing data
+- 
