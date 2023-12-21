@@ -226,4 +226,4 @@ CALCULATE(
 )
 ```
 - Create graphs for visualization to make it easier to understand and draw conclusions from existing data
-- 
+![alt text](https://github.com/alexchristoo/HR_Analysis/edit/main/page1.png?raw=true)
